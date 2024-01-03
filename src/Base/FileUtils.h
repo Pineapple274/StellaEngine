@@ -6,6 +6,7 @@
 
 #pragma once
 
+#include <vector>
 #include <fstream>
 #include "Logger.h"
 

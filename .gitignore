@@ -1,9 +1,13 @@
 .DS_Store
 .idea/
 .vs/
+.include/
 bin/
 out/
 build/
 test_build/
 cmake-build-*/
 CMakeSettings.json
+
+*.log
+*.tex

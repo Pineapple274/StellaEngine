@@ -12,5 +12,6 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/quaternion.hpp>
 #include <glm/gtc/type_aligned.hpp>
+#include <glad/glad.h>
 
 using RGBA = glm::u8vec4;

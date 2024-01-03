@@ -6,6 +6,7 @@
 
 #pragma once
 
+#include "Render/Texture.h"
 #include "Render/PipelineStates.h"
 
 namespace SoftGL {
@@ -15,10 +16,15 @@ namespace OpenGL {
 
 static inline GLint cvtWrap(WrapMode mode) {
   switch (mode) {
-    CASE_CVT_GL(Wrap_, REPEAT);
-    CASE_CVT_GL(Wrap_, MIRRORED_REPEAT);
-    CASE_CVT_GL(Wrap_, CLAMP_TO_EDGE);
-    CASE_CVT_GL(Wrap_, CLAMP_TO_BORDER);
+    case Wrap_REPEAT:           return GL_REPEAT;
+    case Wrap_MIRRORED_REPEAT:  return GL_MIRRORED_REPEAT;
+    case Wrap_CLAMP_TO_EDGE:    return GL_CLAMP_TO_EDGE;
+    case Wrap_CLAMP_TO_BORDER:  return GL_CLAMP_TO_BORDER;
+
+    // CASE_CVT_GL(Wrap_, REPEAT);
+    // CASE_CVT_GL(Wrap_, MIRRORED_REPEAT);
+    // CASE_CVT_GL(Wrap_, CLAMP_TO_EDGE);
+    // CASE_CVT_GL(Wrap_, CLAMP_TO_BORDER);
     default:
       break;
   }
@@ -27,12 +33,19 @@ static inline GLint cvtWrap(WrapMode mode) {
 
 static inline GLint cvtFilter(FilterMode mode) {
   switch (mode) {
-    CASE_CVT_GL(Filter_, LINEAR);
-    CASE_CVT_GL(Filter_, NEAREST);
-    CASE_CVT_GL(Filter_, LINEAR_MIPMAP_LINEAR);
-    CASE_CVT_GL(Filter_, LINEAR_MIPMAP_NEAREST);
-    CASE_CVT_GL(Filter_, NEAREST_MIPMAP_LINEAR);
-    CASE_CVT_GL(Filter_, NEAREST_MIPMAP_NEAREST);
+    case Filter_LINEAR:                   return GL_LINEAR;
+    case Filter_NEAREST:                  return GL_NEAREST;
+    case Filter_LINEAR_MIPMAP_LINEAR:     return GL_LINEAR_MIPMAP_LINEAR;
+    case Filter_LINEAR_MIPMAP_NEAREST:    return GL_LINEAR_MIPMAP_NEAREST;
+    case Filter_NEAREST_MIPMAP_LINEAR:    return GL_NEAREST_MIPMAP_LINEAR;
+    case Filter_NEAREST_MIPMAP_NEAREST:   return GL_NEAREST_MIPMAP_NEAREST;
+
+    // CASE_CVT_GL(Filter_, LINEAR);
+    // CASE_CVT_GL(Filter_, NEAREST);
+    // CASE_CVT_GL(Filter_, LINEAR_MIPMAP_LINEAR);
+    // CASE_CVT_GL(Filter_, LINEAR_MIPMAP_NEAREST);
+    // CASE_CVT_GL(Filter_, NEAREST_MIPMAP_LINEAR);
+    // CASE_CVT_GL(Filter_, NEAREST_MIPMAP_NEAREST);
     default:
       break;
   }

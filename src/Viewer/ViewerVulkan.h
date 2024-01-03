@@ -8,6 +8,7 @@
 
 #include "Viewer.h"
 #include "Config.h"
+#include "Render/OpenGL/OpenGLUtils.h"
 #include "Render/Vulkan/RendererVulkan.h"
 #include "Render/Vulkan/TextureVulkan.h"
 #include "Render/Vulkan/VKGLInterop.h"
