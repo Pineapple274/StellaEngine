@@ -1,9 +1,8 @@
 {
     "clangd.fallbackFlags": [
-        // 设置clangd代码检查的c++版本，目前默认是c++14
-        "-std=c++2a",
-        // 增加项目自身头文件依赖路劲，因为使用vs2019编译不会生成compile_command.json文件，项目自己的头文件就不会找到
-        "-I${workspaceFolder}", // 项目根目录
+        // set version c++, default value is c++14
+        "-std=c++2a",        
+        "-I${workspaceFolder}", // project root path
         "-I${workspaceFolder}/src",
         "-I${workspaceFolder}/third_party/glfw/include",
         "-I${workspaceFolder}/third_party/glad/include",
@@ -17,6 +16,6 @@
         "-I${workspaceFolder}/third_party/vulkan/include",
         "-I${workspaceFolder}/third_party/glslang",
         "-I${workspaceFolder}/third_party/vma",
-        "-I${workspaceFolder}/third_party/renderdoc", // 第三方依赖的头文件目录
+        "-I${workspaceFolder}/third_party/renderdoc", // third_party path
     ]
 }
