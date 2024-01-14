@@ -5,6 +5,8 @@
  */
 
 #include "RendererSoft.h"
+#include "Base/SIMD.h"
+#include "Base/HashUtils.h"
 #include "FramebufferSoft.h"
 #include "TextureSoft.h"
 #include "UniformSoft.h"
